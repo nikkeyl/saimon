@@ -1,0 +1,90 @@
+//========================================================================================================================================================//
+.footer {
+    @include adaptive-value("padding-top", 82, 30);
+    @include adaptive-value("padding-bottom", 44, 20);
+
+    background-color: $color-dark;
+
+    &__container {
+        @media (min-width: em($mobile-small)) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: rem(30);
+        }
+
+        @media (max-width: md($mobile-small)) {
+            text-align: center;
+
+            > :not(:last-child) {
+                margin-bottom: rem(30);
+            }
+        }
+    }
+
+    &__info {
+        @media (min-width: em($mobile-small)) {
+            flex: 0 1 rem(420);
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        font-family: $font-fourth;
+        font-size: rem(40);
+        line-height: 109.1%;
+        color: $color-light;
+
+        &:not(:last-child) {
+            margin-bottom: em(26, 40);
+        }
+    }
+
+    &__text {
+        line-height: math.div(18, 15);
+        color: rgb(255 255 255 / 70%);
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__column {
+        @media (min-width: em($mobile-small)) {
+            flex: 0 1 rem(150);
+        }
+    }
+}
+
+.column-footer {
+    &__button {
+        font-weight: 700;
+        font-size: rem(18);
+        line-height: math.div(22, 18);
+        color: $color-light;
+
+        &:not(:last-child) {
+            @include adaptive-value("margin-bottom", 40, 20);
+        }
+    }
+
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__link {
+        font-size: rem(15);
+        line-height: math.div(28, 15);
+        color: rgb(255 255 255 / 70%);
+        transition: all 0.3s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-dark-green;
+            }
+        }
+    }
+}
+
+//========================================================================================================================================================//

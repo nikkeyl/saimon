@@ -1,0 +1,33 @@
+$container-type         : 0;
+//---------------------------------//
+$max-width-container    : 1050;
+$container-padding      : 30;
+//---------------------------------//
+$max-width              : 1400;
+$min-width              : 320;
+//---------------------------------//
+$container-width        : $max-width-container + $container-padding;
+$pc                     : $container-width;
+$tablet                 : 992;
+$mobile                 : 768;
+$mobile-small           : 480;
+//---------------------------------//
+$main-font-family       : 'Inter';
+$font-second            : 'Mulish';
+$font-third             : 'Poppins';
+$font-fourth            : 'Rammetto One';
+$font-fifth             : 'Devonshire';
+$main-font-weight       : 400;
+$main-font-size         : 15;
+$main-background-color  :#fff;
+$main-font-color        :#6c6c6c;
+$a-focus-active-outline : 0;
+$focus-active-outline   : 0;
+//---------------------------------//
+$color-dark             :#000;
+$color-light            :#fff;
+$color-purple           :#80f;
+$color-yellow           :#fe0;
+$color-light-gray       :#888;
+$color-gray             :#6c6c6c;
+$color-dark-green       :#6f764d;

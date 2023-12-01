@@ -1,0 +1,31 @@
+.change-style-buttons {
+    display: flex;
+    gap: rem(15);
+
+    &__button {
+        @include wh(rem(30), rem(30));
+
+        border: rem(2) solid $color-purple;
+        border-radius: rem(5);
+        transition: all 0.3s ease 0s;
+
+        &.active {
+            color: $color-dark;
+            background-color: $color-yellow;
+        }
+
+        &--block {
+            // background: url('@content') 0 0 no-repeat;
+        }
+
+        &--line {
+            // background: url('@content') 0 0 no-repeat;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}

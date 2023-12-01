@@ -1,0 +1,68 @@
+@import "./menu";
+@import "./icon-menu";
+
+//HEADER========================================================================================================================================================//
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 90;
+    padding: rem(10) 0;
+    width: 100%;
+    transition: all 0.3s ease;
+
+    &__container {
+        @include adaptive-value("gap", 45, 10);
+        @include adaptive-value("min-height", 61, 40);
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        z-index: 5;
+        flex: 1 1 auto;
+
+        img {
+            @include wh(rem(138), rem(27));
+
+            @media (max-width: md($mobile-small)) {
+                @include wh(rem(90), rem(20));
+            }
+        }
+    }
+
+    &__actions {
+        flex: 0 0 auto;
+        justify-content: flex-end;
+        max-width: rem(300);
+    }
+
+    &.header-scroll {
+        top: -100%;
+        background-color: $color-light;
+    }
+
+    &.header-show {
+        top: 0;
+    }
+
+    .lock & {
+        transition: none;
+    }
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: rem(15);
+
+    &__button {
+        z-index: 5;
+    }
+
+    &__icon {
+        flex: 0 0 rem(30);
+    }
+}

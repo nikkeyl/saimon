@@ -1,0 +1,82 @@
+.button {
+    display: inline-flex;
+    padding: rem(12) rem(30);
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: 109%;
+    text-align: center;
+    color: $color-light;
+    background-color: $color-dark-green;
+    transition: all 0.3s ease;
+
+    &:active {
+        transform: translateY(rem(3));
+    }
+
+    &--black {
+        @include adaptive-value("font-size", 18, 14);
+
+        padding: rem(9) rem(12);
+        font-weight: 400;
+        color: $color-light;
+        background-color: $color-dark;
+
+        &:focus {
+            color: $color-light;
+            background-color: $color-dark-green;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-light;
+                background-color: $color-dark-green;
+            }
+        }
+    }
+
+    &--border-black {
+        border: rem(1) solid $color-dark;
+        padding: rem(11.5) rem(29.5);
+        color: $color-dark;
+        background-color: transparent;
+
+        &:focus {
+            border-color: $color-dark-green;
+            color: $color-light;
+            background-color: $color-dark-green;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: $color-dark-green;
+                color: $color-light;
+                background-color: $color-dark-green;
+            }
+        }
+    }
+
+    &--border-white {
+        border: rem(2) solid $color-light;
+        padding: rem(8) rem(26);
+        background-color: transparent;
+
+        &:focus {
+            border-color: $color-dark;
+            color: $color-light;
+            background-color: $color-dark;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: $color-dark;
+                color: $color-light;
+                background-color: $color-dark;
+            }
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+        }
+    }
+}
